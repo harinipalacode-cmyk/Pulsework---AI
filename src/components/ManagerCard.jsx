@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ManagerCard = () => {
+const ManagerCard = ({ setPage }) => {
   return (
     <div className="bg-white p-5 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-orange-600 mb-2">
@@ -20,7 +20,10 @@ const ManagerCard = () => {
         <li>• View Reports</li>
       </ul>
 
-      <button className="bg-orange-600 text-white px-4 py-2 rounded mt-4 hover:bg-orange-700">
+      <button
+        onClick={() => setPage?.('Manager')}
+        className="bg-orange-600 text-white px-4 py-2 rounded mt-4 hover:bg-orange-700"
+      >
         Manage System
       </button>
     </div>
